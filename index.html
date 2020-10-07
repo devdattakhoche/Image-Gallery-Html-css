@@ -29,15 +29,36 @@
         </div>
         <div class="col">
             <div class="gallery-box">
-                <img src="images/pic2.jpg" >
+                <img src="images/pic2.jpg" id="gallery" >
                 <ul>
-                    <li>01</li>
-                    <li>02</li>
-                    <li>03</li>
-                    <li>04</li>
+                    <li class = "btn">01</li>
+                    <li class = "btn active">02</li>
+                    <li class = "btn">03</li>
+                    <li class = "btn">04</li>
                 </ul>
             </div>
         </div>
     </div>
+
+    <script>
+        var btn = document.getElementsByClassName("btn");
+        var gallery = document.getElementById("gallery");
+
+        var images = new Array(
+        "images/pic1.jpg",
+        "images/pic2.jpg",
+        "images/pic3.jpg",
+        "images/pic4.jpg",
+        );
+
+        for(let i=0;i<btn.length;i++){
+            btn[i].onclick = function(){
+                gallery.src = images[i];
+                let current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace("active","");
+                this.className += " active";
+            }
+        }
+    </script>
   </body>
 </html>
