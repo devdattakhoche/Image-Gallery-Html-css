@@ -1,64 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
+</head>
+
+<body>
     <div class="container">
-    <div class="navbar">
-      <img src="images/logo.png" class="logo" />
-      <nav>
-        <ul>
-          <li><a href="">Home</a></li>
-          <li><a href="">Office</a></li>
-          <li><a href="">Hotel</a></li>
-          <li><a href="">Contact Us</a></li>
-        </ul>
-      </nav>
-      <img src="images/menu.png" class="menu-icon" />
-    </div>
-    <div class="row">
-        <div class="col">
-            <div class="text-box">
-                <h5>Our Products</h5>
-                <h1><b>Simplicity</b> <br>is the ultimate Sophistication</h1>
-            </div>
-        </div>
-        <div class="col">
-            <div class="gallery-box">
-                <img src="images/pic2.jpg" id="gallery" >
+        <div class="navbar">
+            <img src="images/logo.png" class="logo" />
+            <nav>
                 <ul>
-                    <li class = "btn">01</li>
-                    <li class = "btn active">02</li>
-                    <li class = "btn">03</li>
-                    <li class = "btn">04</li>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Office</a></li>
+                    <li><a href="">Hotel</a></li>
+                    <li><a href="">Contact Us</a></li>
                 </ul>
+            </nav>
+            <img src="images/menu.png" class="menu-icon" />
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="text-box">
+                    <h5>Our Products</h5>
+                    <h1><b>Simplicity</b> <br>is the ultimate Sophistication</h1>
+                </div>
+            </div>
+            <div class="col">
+                <div class="gallery-box">
+                    <img src="images/pic2.jpg" id="gallery">
+                    <ul>
+                        <li class="btn">01</li>
+                        <li class="btn active">02</li>
+                        <li class="btn">03</li>
+                        <li class="btn">04</li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
 
-    <script>
-        var btn = document.getElementsByClassName("btn");
-        var gallery = document.getElementById("gallery");
+        <script>
+            var btn = document.getElementsByClassName("btn");
+            var gallery = document.getElementById("gallery");
 
-        var images = new Array(
-        "images/pic1.jpg",
-        "images/pic2.jpg",
-        "images/pic3.jpg",
-        "images/pic4.jpg",
-        );
+            var images = new Array(
+                "images/pic1.jpg",
+                "images/pic2.jpg",
+                "images/pic3.jpg",
+                "images/pic4.jpg",
+            );
 
-        for(let i=0;i<btn.length;i++){
-            btn[i].onclick = function(){
-                gallery.src = images[i];
-                let current = document.getElementsByClassName("active");
-                current[0].className = current[0].className.replace("active","");
-                this.className += " active";
+            for (let i = 0; i < btn.length; i++) {
+                btn[i].onclick = function () {
+                    gallery.src = images[i];
+                    let current = document.getElementsByClassName("active");
+                    current[0].className = current[0].className.replace("active", "");
+                    this.className += " active";
+                }
             }
-        }
-    </script>
-  </body>
+        </script>
+</body>
+
 </html>
